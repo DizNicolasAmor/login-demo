@@ -1,0 +1,35 @@
+{
+	"name": "login-demo",
+	"version": "1.0.0",
+	"description": "login app built with Mongo Express React and Node",
+	"main": "server.js",
+	"scripts": {
+		"client-install": "cd client && npm install",
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"author": "Nico Diz",
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"concurrently": "^3.5.1",
+		"cors": "^2.8.4",
+		"express": "^4.16.2",
+		"husky": "^1.2.1",
+		"mongodb": "^3.0.2",
+		"mongoose": "^5.0.6"
+	},
+	"devDependencies": {
+		"@fizzmod/eslint-config": "^2.0.1",
+		"eslint": "^5.9.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-react": "^7.11.1",
+		"nodemon": "^1.14.6"
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "./hooks/commit-msg $HUSKY_GIT_PARAMS"
+		}
+	}
+}
